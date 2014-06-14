@@ -1,9 +1,13 @@
 ##Assignment 2 - for peer review
 
-## Put comments here that give an overall description of what your
-## functions do
+## Provide functionality to allow an inverse to be calulated once for a given matrix, 
+##     and then cached for later retrieval
+## Store values in parent environment to allow them to persist across calls
 
-## Write a short comment describing this function
+
+## Create a list object with methods to store and retrieve a matrix passed to it,
+##      and to store and retrieve the inverse.
+##   Set the inverse to be null when a new matrix is passed in.
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -26,10 +30,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Return the inverse of a given matrix
+## Check if the inverse is already calculated, and if not, then calculate and store it.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
   m <- x$getInverse()
   if(!is.null(m)) {
     message("getting cached data")
